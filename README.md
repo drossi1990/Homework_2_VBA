@@ -5,3 +5,6 @@ Function: Iterate through a workbook including multiple, identically structured 
 9/21/2020
 Designed functioning subroutine which can successfully populate a ticker summary table for a single worksheet, without any additionally formatting
 -Sub automatically locates bottom row 
+
+9/21/2020, 2 
+Added functionality which colors price change cells dependent on whether or not a tickers price ended a year higher or lower than it opened 
