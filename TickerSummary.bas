@@ -1,4 +1,3 @@
-Attribute VB_Name = "Module1"
 Sub TickerSummary()
     
     'Finds last row of worksheet and assigns it to a variable (k) for use in the summary table loop
@@ -42,6 +41,15 @@ Sub TickerSummary()
             Cells(Table_Position, 10).Value = Change_Price
             Cells(Table_Position, 11).Value = Change_Percentage
             Cells(Table_Position, 12).Value = Ticker_Volume
+            If Change_Price > 0 Then
+                Cells(Table_Position, 10).Interior.ColorIndex = 4
+            ElseIf Change_Percentage < 0 Then
+                Cells(Table_Position, 10).Interior.ColorIndex = 3
+            Else
+            
+            End If
+                
+            
             
             'to enable next iteration, resets ticker volume, updates table position, and sets opening to value of next ticker
             Ticker_Volume = 0
@@ -55,4 +63,5 @@ Sub TickerSummary()
             
             
 End Sub
+
 
